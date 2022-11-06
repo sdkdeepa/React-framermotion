@@ -28,7 +28,20 @@ const childVariants = {
   },
   visible: {
     opacity: 1,
+    fontSize: 35,
     color: 'purple',
+  }
+}
+
+const child = {
+   hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 3,
+    fontSize: 35,
+    color: 'orange',
+
   }
 }
 
@@ -41,7 +54,7 @@ const Order = ({ pie }) => {
     >
       <h2>Thank you for your order :)</h2>
       <motion.p variants={childVariants}>You ordered a {pie.base} pie with 
-        {pie.fillings.map(filling => <div key={filling} >{filling}</div>)}
+        {pie.fillings.map(filling => <motion.div variants={child} key={filling} >{filling}</motion.div>)}
       </motion.p>
     </motion.div>
   )
