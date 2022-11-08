@@ -22,9 +22,10 @@ const Home = () => {
     <img class="bg" src="pie.jpeg" alt="" />
 
     <motion.div className="home container"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 1.5, duration: 1.5 }}
+      // attributes initial, animate and transitions are added 
+      initial={{ opacity: 0 }} // fully hidden
+      animate={{ opacity: 1 }} // fully visible
+      transition={{ delay: 1.5, duration: 1.5, type: "tween" }} // if we add duration by 
     >
       <motion.h2 whileHover={{color:'#00FF00', fontSize: 50}} >Welcome to the pie world!</motion.h2>
       <Link to="/base">
